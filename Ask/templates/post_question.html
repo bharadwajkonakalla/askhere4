@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content2 %}
+    <form method="POST" class="form-signin"> {% csrf_token %}
+        <div class="container form-display">
+            <br>
+            {{ form.as_table }}<br>
+            <button type="submit" class="save btn btn-primary">Submit </button>
+             
+        </div>
+    </form>
+{% endblock %}
